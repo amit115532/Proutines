@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{96567342-FA2A-460D-AA40-708F8E7D0161}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Proutines</RootNamespace>
+    <AssemblyName>Proutines</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CoroutineException.cs" />
+    <Compile Include="CoroutineLogicAsInstruction.cs" />
+    <Compile Include="Forever.cs" />
+    <Compile Include="IExternalCoroutinesExecutor.cs" />
+    <Compile Include="Instruction.cs" />
+    <Compile Include="LoopForever.cs" />
+    <Compile Include="ManualYieldInstruction.cs" />
+    <Compile Include="MaxCyclesInstruction.cs" />
+    <Compile Include="Never.cs" />
+    <Compile Include="OnFinishedInstruction.cs" />
+    <Compile Include="OrValue.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ResetNotSupportedException.cs" />
+    <Compile Include="SafeExternalCoroutinesExecutor.cs" />
+    <Compile Include="SingleCoroutineExecutor.cs" />
+    <Compile Include="UnsafeExternalCoroutinesExecutor.cs" />
+    <Compile Include="ValueNotSetException.cs" />
+    <Compile Include="With.cs" />
+    <Compile Include="WrappedYieldOperation.cs" />
+    <Compile Include="ThreadSafeCoroutinesExecutor.cs" />
+    <Compile Include="ICoroutineLogic.cs" />
+    <Compile Include="YieldInstructions\And.cs" />
+    <Compile Include="CoroutineLogic.cs" />
+    <Compile Include="ThreadCoroutinesExecutor.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="ICoroutine.cs" />
+    <Compile Include="ICoroutinesExecutor.cs" />
+    <Compile Include="IYieldInstruction.cs" />
+    <Compile Include="YieldInstructions\EndedYieldOperation.cs" />
+    <Compile Include="YieldInstructions\ExecuteOnce.cs" />
+    <Compile Include="YieldInstructions\InterruptReason.cs" />
+    <Compile Include="YieldInstructions\MinimumTime.cs" />
+    <Compile Include="YieldInstructions\Or.cs" />
+    <Compile Include="YieldInstructions\OrInt.cs" />
+    <Compile Include="YieldInstructions\OrInt2.cs" />
+    <Compile Include="YieldInstructions\OrResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="YieldInstructions\SinceStartupTimeProvider.cs" />
+    <Compile Include="YieldInstructions\ThreadSafeReliableSinceStartupTimeProvider.cs" />
+    <Compile Include="YieldInstructions\Execute.cs" />
+    <Compile Include="YieldInstructions\ExecuteContinuously.cs" />
+    <Compile Include="YieldInstructions\ITimeProvider.cs" />
+    <Compile Include="YieldInstructions\IYieldOperation.cs" />
+    <Compile Include="YieldInstructions\InvokeOption.cs" />
+    <Compile Include="YieldInstructions\OperationNotReadyException.cs" />
+    <Compile Include="YieldInstructions\SetInterruptMethod.cs" />
+    <Compile Include="YieldInstructions\StatusNotSetException.cs" />
+    <Compile Include="YieldInstructions\TimeProviders.cs" />
+    <Compile Include="YieldInstructions\WaitForAction.cs" />
+    <Compile Include="YieldInstructions\WaitForEvent.cs" />
+    <Compile Include="YieldInstructions\WaitForMethodValue.cs" />
+    <Compile Include="YieldInstructions\WaitForMultipleActions.cs" />
+    <Compile Include="YieldInstructions\WaitForSeconds.cs" />
+    <Compile Include="YieldInstructions\WaitOne.cs" />
+    <Compile Include="YieldInstructions\WaitUntilIsFalse.cs" />
+    <Compile Include="YieldInstructions\WaitUntilIsTrue.cs" />
+    <Compile Include="YieldInstructions\ManualYieldOperation.cs" />
+    <Compile Include="YieldOperationBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logging\Logging.csproj">
+      <Project>{69f06555-52fa-4a8c-98e7-a993d5bc4aa6}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

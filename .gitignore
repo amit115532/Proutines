@@ -1,0 +1,16 @@
+LogUtils/bin/
+LogUtils/obj/
+*.nupkg
+Test/
+.vs/
+Logging/obj/
+Proutines/obj/
+packages/
+*.ncrunchsolution
+Proutines.Tasks/obj/
+Proutines.Tests/bin/
+Proutines.Tests/obj/
+Proutines.Tasks.Tests/obj/
+Proutines.Tasks.Tests/bin/
+Proutines.Generators/obj/
+Proutines.Tests/Proutines.Tests.v3.ncrunchproject.user

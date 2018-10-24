@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D90866E-CBA2-4D3B-BA85-4206ED5BE51E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Proutines.Generators</RootNamespace>
+    <AssemblyName>Proutines.Generators</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Proutines.10.2.0\lib\net35\Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Proutines, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Proutines.10.2.0\lib\net35\Proutines.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomGenerator.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="Generators.cs" />
+    <Compile Include="ILerpGenerator.cs" />
+    <Compile Include="IResetableYieldGenerator.cs" />
+    <Compile Include="IYieldGenerator.cs" />
+    <Compile Include="Lerpable.cs" />
+    <Compile Include="LerpGenerator.cs" />
+    <Compile Include="LerpManipulators.cs" />
+    <Compile Include="LoopForeverYieldGenerator.cs" />
+    <Compile Include="MaxCyclesGeneratorInstruction.cs" />
+    <Compile Include="OnChangeResetableYieldGenerator.cs" />
+    <Compile Include="OnChangeYieldGenerator.cs" />
+    <Compile Include="PingPongResetableYieldGenerator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProgressiveYieldGenerator.cs" />
+    <Compile Include="RandomGen.cs" />
+    <Compile Include="Range.cs" />
+    <Compile Include="ReturnLastGeneratorValue.cs" />
+    <Compile Include="SelectResetableYieldGenerator.cs" />
+    <Compile Include="SelectYieldGenerator.cs" />
+    <Compile Include="SequenceGenerator.cs" />
+    <Compile Include="TimeGen.cs" />
+    <Compile Include="WaitForInstructionGenerator.cs" />
+    <Compile Include="WaitForSecondsGenerator.cs" />
+    <Compile Include="ForeachYieldGenerator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
